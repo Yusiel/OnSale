@@ -15,6 +15,7 @@ namespace OnSale.Web.Helpers
             _configuration = configuration;
         }
 
+        [Obsolete]
         public Response SendMail(string to, string subject, string body)
         {
             try
