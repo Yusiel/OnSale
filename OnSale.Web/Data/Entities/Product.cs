@@ -35,7 +35,7 @@ namespace OnSale.Web.Data.Entities
 
         [Display(Name = "Image")]
         public string ImageFullPath => ProductImages == null || ProductImages.Count == 0
-            ? $"https://onsalezulu.azurewebsites.net/images/noimage.png"
+            ? $"https://localhost:44315/images/noimage.png"
             : ProductImages.FirstOrDefault().ImageFullPath;
 
         public ICollection<Qualification> Qualifications { get; set; }
