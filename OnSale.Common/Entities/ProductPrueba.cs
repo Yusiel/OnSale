@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace OnSale.Common.Entities
 {
-    public class Product
+    public class ProductPrueba
     {
         public int Id { get; set; }
 
