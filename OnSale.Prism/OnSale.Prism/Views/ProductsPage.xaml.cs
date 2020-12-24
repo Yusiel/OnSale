@@ -6,7 +6,7 @@ namespace OnSale.Prism.Views
     {
         public ProductPage()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
     }
 }
