@@ -2,11 +2,11 @@
 
 namespace OnSale.Prism.Views
 {
-    public partial class ProductPage : ContentPage
+    public partial class ProductsPage : ContentPage
     {
-        public ProductPage()
+        public ProductsPage()
         {
-            //InitializeComponent();
+            InitializeComponent();
         }
     }
 }

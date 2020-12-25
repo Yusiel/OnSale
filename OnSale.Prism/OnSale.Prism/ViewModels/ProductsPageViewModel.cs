@@ -13,7 +13,7 @@ namespace OnSale.Prism.ViewModels
 
         private readonly INavigationService _navigationService;
         private readonly IApiService _apiService;
-        private ObservableCollection<ProductPrueba> _products;
+        private ObservableCollection<Products> _products;
 
         public ProductsPageViewModel(INavigationService navigationService, IApiService apiService) : base(navigationService)
         {
@@ -23,7 +23,7 @@ namespace OnSale.Prism.ViewModels
             LoadProductsAsync();
         }
 
-        public ObservableCollection<ProductPrueba> Products
+        public ObservableCollection<Products> Products
         {
             get => _products;
             set => SetProperty(ref _products, value);
@@ -38,7 +38,7 @@ namespace OnSale.Prism.ViewModels
             }
 
             string url = App.Current.Resources["UrlAPI"].ToString();
-            Response response = await _apiService.GetListAsync<ProductPrueba>(
+            Response response = await _apiService.GetListAsync<Products>(
                 url,
                 "/api",
                 "/Products");
@@ -52,8 +52,8 @@ namespace OnSale.Prism.ViewModels
                 return;
             }
 
-            List<ProductPrueba> myProducts = (List<ProductPrueba>)response.Result;
-            Products = new ObservableCollection<ProductPrueba>(myProducts);
+            List<Products> myProducts = (List<Products>)response.Result;
+            Products = new ObservableCollection<Products>(myProducts);
         }
 
 
